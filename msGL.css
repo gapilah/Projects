@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+#board  {
+    width: calc(48px * var(--wid));
+    height: calc(48px * var(--hei));
+    border: 10px solid darkblue;
+    background-color: darkcyan;
+    display: grid; /* Use grid instead of flex for better control over tile layout */
+    grid-template-columns: repeat(var(--wid), 48px); /* Define columns based on width */
+    grid-template-rows: repeat(var(--hei), 48px); /* Define rows based on height */
+    justify-content: center;
+    align-content: center;
+    overflow: visible;
+    transform-origin: top center;
+    
+}
+
+#board div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+
+    /* text */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.tile-clicked {
+    background: darkgray;
+
+}
+
+.x1 {
+    color: blue;
+}
+
+.x2 {
+    color: green;
+}
+
+.x3 {
+    color: red;
+}
+
+.x4 {
+    color: navy;
+}
+
+.x5 {
+    color: brown;
+}
+
+.x6 {
+    color: teal;
+}
+
+.x7 {
+    color: black;
+}
+
+.x8 {
+    color: gray;
+}
+
+#flag-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+    border: 1px solid black;
+    align-content: center;
+    align-items: center;
+}
